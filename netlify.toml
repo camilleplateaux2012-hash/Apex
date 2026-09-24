@@ -1,0 +1,26 @@
+# ==============================================================================
+# CONFIGURATION DE DÉPLOIEMENT NETLIFY
+# ==============================================================================
+# Ce fichier configure automatiquement le build et le routage SPA sur Netlify.
+
+[build]
+  # Commande exécutée lors du déploiement
+  command = "npm run build"
+  # Dossier contenant les fichiers compilés prêts à être servis
+  publish = "dist"
+
+# Redirection Single Page Application (SPA)
+# Redirige toutes les requêtes vers index.html avec le code HTTP 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# En-têtes de sécurité et de performance recommandés
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -1,0 +1,6 @@
+{
+  "name": "CYBERSTRIKE // PROTOCOL",
+  "description": "Fondation technique pour jeu FPS multijoueur 3D cyberpunk néon avec Three.js, React Three Fiber, Firebase et Photon Realtime.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
